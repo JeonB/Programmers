@@ -4,7 +4,7 @@ public class Lottos {
     public static void main(String[] args) {
 
         int[] lottos = { 2, 0, 0, 35, 12, 11 };
-        int[] win_nums = { 5, 7, 14, 35, 12, 11 };
+        int[] win_nums = { 5, 7, 14, 35, 12, 11 }; // 당첨번호
 
         solution(lottos, win_nums);
     }
