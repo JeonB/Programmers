@@ -29,7 +29,6 @@ public class Lottos {
 
     if (count1 == 7 || count1 == 6) {
       count1 = 6;
-        df
     }
 
     max = count1 - count2;
