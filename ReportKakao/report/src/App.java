@@ -3,12 +3,13 @@ import java.util.*;
 public class App {
 
   public static void main(String[] args) throws Exception {}
-
+  Solution test = new Solution();
+  
   class Solution {
 
     public int[] solution(String[] id_list, String[] report, int k) {
       int[] answer = new int[id_list.length];
-      Map<String, HashSet<String>> map = new HashMap<>();
+      Map<String, HashSet<String>> map = new HashMap<>(); //HashSet<>은 중복제거용
       Map<String, Integer> idxMap = new HashMap<>();
 
       for (int i = 0; i < id_list.length; i++) {
