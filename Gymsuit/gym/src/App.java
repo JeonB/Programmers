@@ -1,7 +1,6 @@
 /* Greedy Algorithms(탐욕법, 탐욕 알고리즘) 문제
 ➡ 미리 정한 기준에 따라서 매번 가장 좋아보이는 답을 선택하는 알고리즘
  */
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
