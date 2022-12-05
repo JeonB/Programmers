@@ -6,23 +6,16 @@ class Split {
   }
 
   public int solution(String s) {
+    String[] str = s.split("");
     int answer = 0,i=0;
-    int cnt1 = 1, cnt2 = 0;
-    char fistChar = s.charAt(i);
-    for (i =0; i < s.length(); i++) {
-
-      if (fistChar == s.charAt(i+1)) {
-        cnt1++;
-        fistChar=s.charAt(i+1);
-        continue;
-      } else {
-        cnt2++;
-      }
-      
+    int cnt1 = 0, cnt2 = 0;
+    char fistChar;
+    for (String c : str) {
+      fistChar= c ;
+      cnt1++;
       if (cnt1 == cnt2) {
         answer++;
       }
-      fistChar = s.charAt(i+2);
     }
     return answer;
   }
