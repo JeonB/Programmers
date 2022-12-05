@@ -6,6 +6,10 @@ class Split {
 
   public int solution(String s) {
     int answer = 0;
+    char fistChar;
+    for (int i = 0; i < s.length(); i++) {
+      fistChar = s.charAt(0);
+    }
     System.out.println("dfd");
     return answer;
   }
