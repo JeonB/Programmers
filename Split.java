@@ -19,3 +19,4 @@ class Split {
 //     2) 반복 + result값 증가
 //     3) 문자열 끝에 다다르면 종료 및 result값 반환
 // }
+test
