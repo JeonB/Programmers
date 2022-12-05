@@ -1,16 +1,29 @@
 class Split {
 
   public static void main(String[] args) {
+    Solution("test")
     System.out.println("test");
   }
 
   public int solution(String s) {
-    int answer = 0;
-    char fistChar;
-    for (int i = 0; i < s.length(); i++) {
-      fistChar = s.charAt(0);
+    int answer = 0,i=0;
+    int cnt1 = 1, cnt2 = 0;
+    char fistChar = s.charAt(i);
+    for (i =0; i < s.length(); i++) {
+
+      if (fistChar == s.charAt(i+1)) {
+        cnt1++;
+        fistChar=s.charAt(i+1);
+        continue;
+      } else {
+        cnt2++;
+      }
+      
+      if (cnt1 == cnt2) {
+        answer++;
+      }
+      fistChar = s.charAt(i+2);
     }
-    System.out.println("dfd");
     return answer;
   }
 }
