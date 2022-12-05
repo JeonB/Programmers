@@ -1,31 +1,66 @@
 class Split {
 
+  private static int cnt1;
+
   public static void main(String[] args) {
-    Solution("test")
-    System.out.println("test");
+    String abc = "abracadabra";
+    System.out.println(solution(abc));
   }
 
-  public int solution(String s) {
+  public static int solution(String s) {
     String[] str = s.split("");
-    int answer = 0,i=0;
+    int answer = 0;
     int cnt1 = 0, cnt2 = 0;
-    char fistChar;
+    String firstChar = "";
     for (String c : str) {
-      fistChar= c ;
-      cnt1++;
+      if (firstChar == "") {
+        firstChar = c;
+        cnt1++;
+        continue;
+      } else if (firstChar.equals(c)) {
+        cnt1++;
+        continue;
+      } else {
+        cnt2++;
+      }
+
       if (cnt1 == cnt2) {
+        firstChar = "";
+        cnt1 = 0;
+        cnt2 = 0;
         answer++;
       }
+    }
+    if (!firstChar.isEmpty()) {
+      answer++;
     }
     return answer;
   }
 }
-//     ex str = "aaabbbcc";
-//     -> return 2
-//     if()
-//     string firstChar = s[0]
-//     string otherChar
-//     1) 검사하는 첫 문자의 개수 == 첫 문자가 아닌 문자의 개수 -> 제외 result값 증가
-//     2) 반복 + result값 증가
-//     3) 문자열 끝에 다다르면 종료 및 result값 반환
-// }
+/* 모범답안 ->  toCharArray()를 이용하면 split(),equals(),isEmpty() 같은 메소드를 안 써도 된다.
+ class Solution {
+
+  public int solution(String s) {
+      char firstChar = '1';
+      int same = 0, different = 0, answer = 0;
+      for (char c : s.toCharArray()) {
+          if (firstChar == '1') {
+              firstChar = c;
+              same++;
+              answer++;
+          } else if (firstChar == c) {
+              same++;
+          } else {
+              different++;
+          }
+
+          if (same == different) {
+              firstChar = '1';
+              same = 0; different = 0;
+          }
+      }
+
+      return answer;
+  }
+}
+*/
