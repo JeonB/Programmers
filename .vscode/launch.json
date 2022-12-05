@@ -1,7 +1,36 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": []
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Split",
+      "request": "launch",
+      "mainClass": "Split",
+      "projectName": "Programmers_d63a4542"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "Programmers_d63a4542"
+    },
+    {
+      "type": "java",
+      "name": "Launch RecommendId",
+      "request": "launch",
+      "mainClass": "RecommendId",
+      "projectName": "Programmers_d63a4542"
+    },
+    {
+      "type": "java",
+      "name": "Launch RecommendId",
+      "request": "launch",
+      "mainClass": "RecommendId.src.RecommendId",
+      "projectName": "Programmers_d63a4542"
+    }
+  ]
 }
