@@ -9,6 +9,13 @@
       "name": "Launch Split",
       "request": "launch",
       "mainClass": "Split",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
+      "name": "Launch Split",
+      "request": "launch",
+      "mainClass": "Split",
       "projectName": "Programmers_d63a4542"
     },
     {
