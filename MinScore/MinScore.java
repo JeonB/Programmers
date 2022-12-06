@@ -17,7 +17,7 @@ public class MinScore {
     for (int i = 0; i < score.length; i++) {
       if (i < k) {
         fameHall[i] = score[i];
-        answer[i] = score[i];
+        answer[i] = Math.min(fameHall[i], score[i]);
       } else {
         fameHall[k - 1] = Math.min(fameHall[k - 1], score[i]);
         answer[i] = fameHall[k - 1];
