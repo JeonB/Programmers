@@ -14,6 +14,7 @@ public class MinScore {
     int[] answer = new int[score.length];
     int[] fameHall = new int[k];
 
+    //arrays.sort 이용해보기
     for (int i = 0; i < score.length; i++) {
       if (i < k) {
         fameHall[i] = score[i];
