@@ -1,7 +1,5 @@
 class Split {
 
-  private static int cnt1;
-
   public static void main(String[] args) {
     String abc = "abracadabra";
     System.out.println(solution(abc));
