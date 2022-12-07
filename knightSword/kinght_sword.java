@@ -2,6 +2,10 @@ import java.util.Arrays;
 
 class Solution {
 
+  public static void main(String[] args) {
+    System.out.println();
+  }
+
   public int solution(int number, int limit, int power) {
     Solution a = new Solution();
     int[] exponent = new int[4]; // 2,3,5,7 소수
