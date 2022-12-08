@@ -16,8 +16,7 @@ class Solution {
     return answer;
   }
 }
-
-//모범 답안
+/* 모범 답안 
 class Solution {
 
   public int solution(int[] d, int budget) {
@@ -35,4 +34,4 @@ class Solution {
 
     return answer;
   }
-}
+} */
