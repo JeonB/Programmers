@@ -8,6 +8,13 @@
       "type": "java",
       "name": "Launch Solution",
       "request": "launch",
+      "mainClass": "FruitVendor.Solution",
+      "projectName": "Programmers_7fd2c404"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
       "mainClass": "knightSword.Solution",
       "projectName": "Programmers_4bb2daaf"
     },
