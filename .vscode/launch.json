@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "knightSword.Solution",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
       "name": "Launch Split",
       "request": "launch",
       "mainClass": "StringSplit.Split",
