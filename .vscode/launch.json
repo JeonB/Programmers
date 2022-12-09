@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ClosestString",
+      "request": "launch",
+      "mainClass": "ClosestString.ClosestString",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "FruitVendor.Solution",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
       "name": "Launch Solution",
       "request": "launch",
       "mainClass": "FruitVendor.Solution",
