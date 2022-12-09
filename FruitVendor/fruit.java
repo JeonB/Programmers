@@ -1,12 +1,12 @@
 package FruitVendor;
 
 import java.util.*;
-import java.util.stream.IntStream;
 class Solution {
 
     public static void main(String[] args) {
         int[] score = {4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2};
         System.out.println(solution(4,3,score));
+
     }
     public static int solution(int k, int m, int[] score) {
         int answer = 0;
