@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Babbling",
+      "request": "launch",
+      "mainClass": "Babbling.Babbling",
+      "projectName": "Programmers_7fd2c404"
+    },
+    {
+      "type": "java",
       "name": "Launch arrSum",
       "request": "launch",
       "mainClass": "arrSum.arrSum",

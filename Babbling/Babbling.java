@@ -1,31 +1,39 @@
-package Babbling;
 
+package Babbling;
 public class Babbling {
-    public int solution(String[] babbling) {
+    public static void main(String[] args) {
+        String[] babbling = {"aayaya", "uuu", "yeye", "yemaye", "ayaayaa"};
+        System.out.println(solution(babbling)); 
+    }
+    public static int solution(String[] babbling) {
         int answer = 0;
-        return answer;
-    }    
+        String[] babbling_word = {"ma","ye","woo","aya"};
+        for(String word : babbling){
+            for(String is_duplicate_word : babbling_word){
+                if(!(word.contains(is_duplicate_word.repeat(2)))){
+                    word = word.replace(is_duplicate_word, "!");
+                }
+            }
+            if(word.replace("!","") == ""){
+                answer++;
+            }
+    }
+        return answer;    
+ }
 }
 
 
-/* 
-"aya", "ye", "woo", "ma" 
+/* 모범답안
 
-if(babling[i].charAt[0]+babling[i].charAt[1] == "ye" or "ma")
-else(babling[i].charAt[0]+babling[i].charAt[1] == "aya" or "woo")
-
-
-String babling = "ayaye"
-
-if(babling[i].getChars(j,j+2) == "ye" or "ma")
-    j+=2
-    solution
-else if (babling[i].getChars(j,j+3) == "aya" or "woo")
-    j+=3
-    solution
-else continue;
-
-
-
+def solution(babbling):
+    count = 0
+    babble = [ "aya", "ye", "woo", "ma" ]
+    for utter in babbling:
+        for text in babble:
+            if text * 2 not in utter:
+                utter = utter.replace(text, ' ')
+        if utter.strip() == '':
+            count += 1
+    return count
 
 */
