@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch NumberPartner",
+      "request": "launch",
+      "mainClass": "NumberPartner.NumberPartner",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
       "name": "Launch Babbling",
       "request": "launch",
       "mainClass": "Babbling.Babbling",
