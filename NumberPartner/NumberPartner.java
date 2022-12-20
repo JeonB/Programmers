@@ -18,7 +18,7 @@ class Solution {
         
         for (int i = 9; i >= 0; i--){
             while(cntX[i] > 0 && cntY[i] > 0){
-                sb.append(i);
+                sb.append(i); //sb 는 추가되는 요소의 타입을 안 가리는 듯?
                 cntX[i]--;
                 cntY[i]--;
             }
