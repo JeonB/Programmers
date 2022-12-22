@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Cola",
+      "request": "launch",
+      "mainClass": "Cola.Cola",
+      "projectName": "Programmers_7fd2c404"
+    },
+    {
+      "type": "java",
       "name": "Launch Solution",
       "request": "launch",
       "mainClass": "FoodFight.Solution",
