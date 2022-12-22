@@ -1,34 +1,3 @@
-package FoodFight;
-
-class Solution {
-    public String solution(int[] food) {
-        String answer = "";
-        for(int i = 1 ; i<food.length;i++){
-            if(food[i]>1){
-                if(food[i]%2 == 0){
-                    food[i] /= 2;
-                    String food_num = Integer.toString(i);
-                    StringBuilder sb = new StringBuilder();
-                    StringBuilder sb2 = new StringBuilder();
-                    for(int j = 0; j<food[i];j++){
-                        sb.append(food_num);
-                        sb2.append(food_num);
-                    }
-                }
-                else{
-                    food[i] -=1;
-                    food[i] /= 2;
-                    String food_num = Integer.toString(i);
-                    StringBuilder sb = new StringBuilder();
-                    for(int j = 0; j<food[i];j++)
-                        sb.append(food_num);
-                }
-            }
-        }
-        return answer;
-    }
-}
-
 /* 선수들은 1대1 대결
 매 대결마다 음식의 종류와 양이 바뀜
 한 선수는 왼쪽에서 중앙으로, 다른 선수는 오른쪽에서 중앙으로 먹으면서 이동.
@@ -48,3 +17,54 @@ sb1은 왼쪽 sb2는 오른쪽  그리고 중앙값 0을 더한 값 answer를 �
 
 
 */
+package FoodFight;
+
+class Solution {
+    public static void main(String[] args) {
+        int[] food = {1,7,1,2};
+        System.out.println(solution(food));
+    }
+    public static String solution(int[] food) {
+        String answer = "";
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+        for(int i = 1 ; i<food.length;i++){
+            String food_num = Integer.toString(i);
+            if(food[i]>1){
+                if(food[i]%2 == 0){
+                    food[i] /= 2;
+                    for(int j = 0; j<food[i];j++){
+                        sb.append(food_num);
+                        sb2.append(food_num);
+                    }
+                }
+                else{
+                    food[i] -=1;
+                    food[i] /= 2;
+                    for(int j = 0; j<food[i];j++){
+                        sb.append(food_num);
+                        sb2.append(food_num);
+                    }
+                }
+            }
+        }
+        sb2.reverse();
+        sb = sb.append("0").append(sb2);
+        answer = sb.toString();
+        return answer;
+    }
+}
+/* 모범답안
+class Solution {
+    public String solution(int[] food) {
+        String answer = "0";
+
+        for (int i = food.length - 1; i > 0; i--) {
+            for (int j = 0; j < food[i] / 2; j++) {
+                answer = i + answer + i; 
+            }
+        }
+
+        return answer;
+    }
+} */

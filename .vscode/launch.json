@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "FoodFight.Solution",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
       "name": "Launch test",
       "request": "launch",
       "mainClass": "test",
