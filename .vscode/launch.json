@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch miniString",
+      "request": "launch",
+      "mainClass": "크기가작은부분문자열.miniString",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
+      "name": "Launch Cola",
+      "request": "launch",
+      "mainClass": "Cola.Cola",
+      "projectName": "Programmers_4bb2daaf"
+    },
+    {
+      "type": "java",
       "name": "Launch Cola",
       "request": "launch",
       "mainClass": "Cola.Cola",
