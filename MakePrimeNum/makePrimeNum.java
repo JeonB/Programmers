@@ -21,6 +21,9 @@ class Solution {
     public static boolean isPrime(int num){
         boolean isprime;
         for(int i =1 ; i<=Math.pow(num, 0.5) ; i++){
+            if(num % i == 0){
+                
+            }
             
         }
 
