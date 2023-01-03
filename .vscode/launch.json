@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "MakePrimeNum.Solution",
+      "projectName": "Programmers_aa5ab274"
+    },
+    {
+      "type": "java",
       "name": "Launch miniString",
       "request": "launch",
       "mainClass": "크기가작은부분문자열.miniString",
