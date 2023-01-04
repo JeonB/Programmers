@@ -79,7 +79,7 @@ class Solution {
 회고 : 중복된 코드가 너무 많고 %연산자를 이용하면 훨씬 간결하다는 걸 인지하지 못 했다. 또한, 
 stream().mapToInt(i -> i).toArray()와 같은 Integer -> int 로 변환하는 클래스를 활용하는 건 이제 외워야겠다.
 */
-/* 모범답안
+/* 수포자 모범답안
   public static int[] solution(int[] answers) {
         int[][] patterns = {
                 {1, 2, 3, 4, 5},
