@@ -9,6 +9,13 @@
       "name": "Launch Solution",
       "request": "launch",
       "mainClass": "수포자.Solution",
+      "projectName": "Programmers_7fd2c404"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "수포자.Solution",
       "projectName": "Programmers_aa5ab274"
     },
     {
