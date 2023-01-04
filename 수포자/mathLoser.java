@@ -99,11 +99,8 @@ stream().mapToInt(i -> i).toArray()와 같은 Integer -> int 로 변환하는 �
         for(int i = 0; i < hit.length; i++)
             if(max == hit[i]) list.add(i + 1);
 
-        int[] answer = new int[list.size()];
-        int cnt = 0;
-        for(int num : list)
-            answer[cnt++] = num;
-        return answer;
+  
+        return list.stream().mapToInt(i -> i).toArray();
     }
 
  
