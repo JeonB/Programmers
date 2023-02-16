@@ -1,10 +1,30 @@
 package PlayAlone;
+import java.util.*;
 
 public class PlayAlone {
     
 }
 public int solution(int[] cards) {
     int answer = 0;
+    int score = 0;
+    int count = 0;
+    ArrayList<Integer> numList = new ArrayList<>();
+    Set<Integer> numSet = new HashSet<>(numList);
+    Random rand = new Random();
+    int selectBox = rand.nextInt(cards.length);
+    for(int i : cards){
+        int openBox = cards[selectBox]; 
+        
+        while(numList.size() == numSet.size()){
+            numList.add(openBox);
+            count++;
+            score = count;
+        }
+        if(count == cards.length)
+            score=0;
+    }
+
+
     return answer;
 }
 
