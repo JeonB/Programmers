@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch CardDummies",
+      "request": "launch",
+      "mainClass": "CardDummies.CardDummies",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch Password",
       "request": "launch",
       "mainClass": "Password.Password",
