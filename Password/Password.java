@@ -3,31 +3,26 @@ package Password;
 public class Password {
 
   public static void main(String[] args) {
-    System.out.println(solution("tukks", "wbqd", 5));
+    System.out.println(solution("zukks", "wbqd", 5));
   }
 
   public static String solution(String s, String skip, int index) {
-    StringBuilder stringBuilder = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-      char c = (char) (s.charAt(i) + index);
-      if (c > 122) {
-        c = (char) ('a' + (c - 122) - 1);
-        for (int j = 0; j < skip.length(); j++) {
-          if (skip.charAt(j) < c) {
-            c += 1;
-            if (c > 122) c = 'a';
-          }
-        }
-      }
+    char[] charArr = s.toCharArray();
+    for (int i = 0; i < charArr.length; i++) {
+      charArr[i] = (char) (s.charAt(i) + index);
+      if (charArr[i] > 122) charArr[i] -= 26;
       for (int j = 0; j < skip.length(); j++) {
-        if (s.charAt(i) < skip.charAt(j) && skip.charAt(j) < c) {
-          c += 1;
-          if (c > 122) c = 'a';
+        if (s.charAt(i) > skip.charAt(j) && skip.charAt(j) < charArr[i]) {
+          charArr[i] += 1;
+          if (charArr[i] > 122) charArr[i] -= 26;
+          continue;
         }
+        if (
+          s.charAt(i) < skip.charAt(j) && charArr[i] > skip.charAt(j)
+        ) charArr[i] += 1;
       }
-      stringBuilder.append(c);
     }
-    String answer = stringBuilder.toString();
+    String answer = new String(charArr);
     return answer;
   }
 }
