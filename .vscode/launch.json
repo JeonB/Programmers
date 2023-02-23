@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Hi",
+      "request": "launch",
+      "mainClass": "Hi",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch test",
+      "request": "launch",
+      "mainClass": "test",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScoreMgmSystemArray1",
+      "request": "launch",
+      "mainClass": "ScoreMgmSystemArray1",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch base3",
       "request": "launch",
       "mainClass": "base3.base3",
