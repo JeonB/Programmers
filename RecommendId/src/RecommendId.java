@@ -33,7 +33,7 @@ public class RecommendId {
     return answer;
   }
 }
-      new_id = new_id.replaceAll("^[.]|[.]$", "");
+/*     new_id = new_id.replaceAll("^[.]|[.]$", "");
     }
     if (new_id.length() < 3) {
       lastChar = new_id.charAt(new_id.length() - 1); // 문자열의 반복할 마지막 문자
@@ -45,4 +45,4 @@ public class RecommendId {
     answer = new_id;
     return answer;
   }
-}
+} */

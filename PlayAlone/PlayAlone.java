@@ -1,10 +1,10 @@
 package PlayAlone;
+
 import java.util.*;
 
 public class PlayAlone {
-    
-}
-public int solution(int[] cards) {
+
+  public int solution(int[] cards) {
     int answer = 0;
     int score = 0;
     int count = 0;
@@ -12,22 +12,20 @@ public int solution(int[] cards) {
     Set<Integer> numSet = new HashSet<>(numList);
     Random rand = new Random();
     int selectBox = rand.nextInt(cards.length);
-    for(int i : cards){
-        int openBox = cards[selectBox]; 
-        
-        while(numList.size() == numSet.size()){
-            numList.add(openBox);
-            count++;
-            score = count;
-        }
-        if(count == cards.length)
-            score=0;
+    for (int i : cards) {
+      int openBox = cards[selectBox];
+
+      while (numList.size() == numSet.size()) {
+        numList.add(openBox);
+        count++;
+        score = count;
+      }
+      if (count == cards.length) score = 0;
     }
 
-
     return answer;
+  }
 }
-
 /* 
  * 혼자서도 잘 노는 범희는 어느 날 방구석에 있는 숫자 카드 더미를 보더니 혼자 할 수 있는 재미있는 게임을 생각해냈습니다.
 

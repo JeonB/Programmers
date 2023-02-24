@@ -1,3 +1,5 @@
+package Lottos.src;
+
 public class Lottos {
 
   public static void main(String[] args) {

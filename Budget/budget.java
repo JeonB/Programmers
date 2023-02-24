@@ -1,3 +1,5 @@
+package Budget;
+
 import java.util.*;
 
 class Solution {
