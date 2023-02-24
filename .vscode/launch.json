@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch cutNumbers",
+      "request": "launch",
+      "mainClass": "CutNumbers.cutNumbers",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch Lottos",
       "request": "launch",
       "mainClass": "Lottos.src.Lottos",
