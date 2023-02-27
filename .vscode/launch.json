@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch minimumBox",
+      "request": "launch",
+      "mainClass": "MinimumBox.minimumBox",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch makeTrio",
       "request": "launch",
       "mainClass": "MakeTrio.makeTrio",
