@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch caesarPassword",
+      "request": "launch",
+      "mainClass": "시저암호.caesarPassword",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch minimumBox",
       "request": "launch",
       "mainClass": "MinimumBox.minimumBox",
