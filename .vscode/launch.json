@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "strangeStr",
+      "request": "launch",
+      "mainClass": "이상한문자만들기.strangeStr",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
       "name": "Launch caesarPassword",
       "request": "launch",
       "mainClass": "시저암호.caesarPassword",
