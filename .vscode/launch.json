@@ -6,10 +6,38 @@
   "configurations": [
     {
       "type": "java",
+<<<<<<< HEAD
       "name": "Launch Solution",
       "request": "launch",
       "mainClass": "최대공약수최소공배수.Solution",
       "projectName": "Programmers_aa5ab274"
+=======
+      "name": "strangeStr",
+      "request": "launch",
+      "mainClass": "이상한문자만들기.strangeStr",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch caesarPassword",
+      "request": "launch",
+      "mainClass": "시저암호.caesarPassword",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch minimumBox",
+      "request": "launch",
+      "mainClass": "MinimumBox.minimumBox",
+      "projectName": "Programmers_c5899650"
+    },
+    {
+      "type": "java",
+      "name": "Launch makeTrio",
+      "request": "launch",
+      "mainClass": "MakeTrio.makeTrio",
+      "projectName": "Programmers_c5899650"
+>>>>>>> 20c8cf56bdaa2c686868bd3dee39d08fc0efa534
     },
     {
       "type": "java",
