@@ -16,10 +16,10 @@ public class strangeStr {
         num = 0;
         continue;
       }
-      if (num % 2 == 0 && 'a' <= s.charAt(i)) {
-        strTochar[i] -= 32;
-      } else if (num % 2 == 1 && 'a' > s.charAt(i)) {
-        strTochar[i] += 32;
+      if (num % 2 == 0 && Character.isLowerCase(s.charAt(i))) { // if (num % 2 == 0 && 'a' <= s.charAt(i))
+        strTochar[i] = Character.toUpperCase(strTochar[i]); // strTochar[i] -= 32
+      } else if (num % 2 == 1 && Character.isUpperCase(s.charAt(i))) { // num % 2 == 1 && 'a' > s.charAt(i)
+        strTochar[i] = Character.toLowerCase(strTochar[i]); // strTochar[i] += 32
       }
       num++;
     }
