@@ -1,5 +1,7 @@
 package 대충만든자판;
 
+import java.util.Arrays;
+
 /* 
  휴대폰의 자판은 컴퓨터 키보드 자판과는 다르게 하나의 키에 여러 개의 문자가 할당될 수 있습니다. 키 하나에 여러 문자가 할당된 경우, 동일한 키를 연속해서 빠르게 누르면 할당된 순서대로 문자가 바뀝니다.
 
@@ -16,8 +18,68 @@ package 대충만든자판;
 
 class Solution {
 
-  public int[] solution(String[] keymap, String[] targets) {
-    int[] answer = {};
+  public static void main(String[] args) {
+    String[] keymap = { "AGZ", "BSSS" };
+    String[] targets = { "ASA", "BGZ" };
+    System.out.println(Arrays.toString(solution(keymap, targets)));
+  }
+
+  public static int[] solution(String[] keymap, String[] targets) {
+    int[] answer = new int[targets.length];
+
+    for (int i = 0; i < targets.length; i++) {
+      int[][] answerList = new int[keymap.length][targets[i].length()];
+      int[][] answerList2 = new int[targets[i].length()][keymap.length];
+      for (int j = 0; j < keymap.length; j++) {
+        answerList[j] = keymap(keymap[j], targets[i]);
+      }
+      for (int k = 0; k < targets[i].length(); k++) {
+        for (int j = 0; j < keymap.length; j++) answerList2[k][j] =
+          answerList[j][k];
+      }
+      for (int j = 0; j < targets[i].length(); j++) {
+        int k = 0;
+        Arrays.sort(answerList2[j]);
+        if (answerList2[j][answerList2[j].length - 1] == -1) {
+          answer[i] = -1;
+          break;
+        }
+        while (answerList2[j][k] == -1) {
+          k++;
+        }
+        answer[i] += answerList2[j][k];
+      }
+    }
+
     return answer;
   }
+
+  public static int[] keymap(String keymap, String target) {
+    int[] count = new int[target.length()];
+    for (int i = 0; i < target.length(); i++) {
+      int cnt = 0;
+      int confirm = 0;
+      for (int j = 0; j < keymap.length(); j++) {
+        cnt++;
+        if (keymap.charAt(j) == target.charAt(i)) {
+          count[i] = cnt;
+          confirm++;
+          break;
+        }
+      }
+      if (confirm == 0) count[i] = -1;
+    }
+    return count;
+  }
 }
+// if (answerList[k - 1][j] > answerList[k][j]) {
+/*  if()
+  ans[j] = answerList[k][j];
+} else if (
+  answerList[k - 1][j] <= answerList[k][j] &&
+  answerList[k - 1][j] != -1
+) {
+  ans[j] = answerList[k - 1][j];
+} else {
+  ans[j] = -1;
+} */
