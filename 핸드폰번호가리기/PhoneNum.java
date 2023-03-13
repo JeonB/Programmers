@@ -13,7 +13,7 @@ public class PhoneNum {
           phone_number.length()
         );
     } else {
-      answer = phone_number.substring(0, 4);
+      answer = phone_number;
     }
     return answer;
   }
