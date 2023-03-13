@@ -1,7 +1,5 @@
 package 제일작은수제거;
 
-import java.util.Arrays;
-
 public class MinNumDelete {
 
   public int[] solution(int[] arr) {
