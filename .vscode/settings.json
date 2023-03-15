@@ -1,8 +1,0 @@
-{
-  "java.project.sourcePaths": [
-    "Poncketmon/src",
-    "Gymsuit/gym/src",
-    ""
-  ],
-  "java.debug.settings.onBuildFailureProceed": true
-}
