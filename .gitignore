@@ -1,0 +1,32 @@
+### IntelliJ IDEA ###
+programmers_lv1/out/
+programmers_lv1/!**/src/main/**/out/
+programmers_lv1/!**/src/test/**/out/
+programmers_lv1/.idea/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+programmers_lv1//src/programmers_lv1.iml
+programmers_lv1//programmers_lv11.iml

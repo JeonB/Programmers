@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/programmers_lv1/src/programmers_lv1.iml" filepath="$PROJECT_DIR$/programmers_lv1/src/programmers_lv1.iml" />
       <module fileurl="file://$PROJECT_DIR$/programmers_lv1/programmers_lv11.iml" filepath="$PROJECT_DIR$/programmers_lv1/programmers_lv11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programmers_lv2/programmers_lv2.iml" filepath="$PROJECT_DIR$/programmers_lv2/programmers_lv2.iml" />
     </modules>
   </component>
 </project>
