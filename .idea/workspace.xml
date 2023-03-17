@@ -5,18 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/숫자문자열과영단어/NumberStringEng.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/숫자문자열과영단어/NumberStringEngTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers_lv1/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/programmers_lv1/programmers_lv1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/programmers_lv1.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,9 +56,15 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11 (2)",
     "last_opened_file_path": "C:/Users/tj/Desktop/Programmers/programmers_lv1",
     "node.js.detected.package.eslint": "true",
@@ -67,7 +79,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="숫자문자열과영단어" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.NumberStringEngTest">
     <configuration name="Cola" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cola.Cola" />
       <module name="programmers_lv1" />
@@ -77,6 +97,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberStringEngTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="숫자문자열과영단어.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="숫자문자열과영단어" />
+      <option name="MAIN_CLASS_NAME" value="숫자문자열과영단어.NumberStringEngTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberStringEngTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="숫자문자열과영단어.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="숫자문자열과영단어" />
+      <option name="MAIN_CLASS_NAME" value="숫자문자열과영단어.NumberStringEngTest" />
+      <option name="METHOD_NAME" value="solution" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NumberStringEngTest" />
+        <item itemvalue="JUnit.NumberStringEngTest.solution" />
         <item itemvalue="Application.Cola" />
       </list>
     </recent_temporary>
@@ -115,7 +168,8 @@
       <workItem from="1678860536521" duration="489000" />
       <workItem from="1678861040515" duration="3861000" />
       <workItem from="1678865332315" duration="386000" />
-      <workItem from="1678865731148" duration="90000" />
+      <workItem from="1678865731148" duration="1076000" />
+      <workItem from="1679012400565" duration="2385000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
