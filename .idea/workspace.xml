@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/Failurerate/Failurerate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/Failurerate/FailurerateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers_lv1/src/DartGame/DartGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/src/DartGame/DartGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,10 +82,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Failurerate" />
       <recent name="숫자문자열과영단어" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.NumberStringEngTest">
+  <component name="RunManager" selected="JUnit.FailurerateTest.solution">
     <configuration name="Cola" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cola.Cola" />
       <module name="programmers_lv1" />
@@ -94,6 +96,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FailurerateTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Failurerate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Failurerate" />
+      <option name="MAIN_CLASS_NAME" value="Failurerate.FailurerateTest" />
+      <option name="METHOD_NAME" value="solution" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,6 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FailurerateTest.solution" />
         <item itemvalue="JUnit.NumberStringEngTest" />
         <item itemvalue="JUnit.NumberStringEngTest.solution" />
         <item itemvalue="Application.Cola" />
@@ -166,7 +185,7 @@
       <workItem from="1678861040515" duration="3861000" />
       <workItem from="1678865332315" duration="386000" />
       <workItem from="1678865731148" duration="1076000" />
-      <workItem from="1679012400565" duration="2604000" />
+      <workItem from="1679012400565" duration="12075000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
@@ -241,5 +260,16 @@
     </ignored-roots>
     <MESSAGE value="lv1" />
     <option name="LAST_COMMIT_MESSAGE" value="lv1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/programmers_lv1/src/Failurerate/Failurerate.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
