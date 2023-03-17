@@ -1,2 +1,3 @@
-package DartGame;public class DartGame {
+package DartGame;
+public class DartGame {
 }
