@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/Billiards/Billiards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers_lv1/programmers_lv1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/programmers_lv1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers_lv1/src/DartGame/DartGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/src/DartGame/DartGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers_lv1/test/DartGame/DartGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/test/DartGame/DartGameTest.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/Failurerate/Failurerate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/Failurerate/FailurerateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
+      <change beforePath="$PROJECT_DIR$/programmers_lv1/src/Billiards/Billiards.java" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/src/Billiards/Billiards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-<<<<<<< HEAD
         <option value="JUnit5 Test Class" />
         <option value="Class" />
-=======
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
       </list>
     </option>
   </component>
@@ -64,7 +48,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
@@ -93,53 +76,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "11 (2)",
-    "last_opened_file_path": "C:/Users/tj/Desktop/Programmers/programmers_lv1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-<<<<<<< HEAD
       <recent name="DartGame" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.DartGameTest.solutionTest">
-=======
-      <recent name="Failurerate" />
-      <recent name="숫자문자열과영단어" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.FailurerateTest.solution">
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
     <configuration name="Cola" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cola.Cola" />
       <module name="programmers_lv1" />
@@ -153,7 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="DartGameTest.solutionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
@@ -165,25 +109,11 @@
       <option name="PACKAGE_NAME" value="DartGame" />
       <option name="MAIN_CLASS_NAME" value="DartGame.DartGameTest" />
       <option name="METHOD_NAME" value="solutionTest" />
-=======
-    <configuration name="FailurerateTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Failurerate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Failurerate" />
-      <option name="MAIN_CLASS_NAME" value="Failurerate.FailurerateTest" />
-      <option name="METHOD_NAME" value="solution" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="PasswordTest.stringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
@@ -195,34 +125,6 @@
       <option name="PACKAGE_NAME" value="Password" />
       <option name="MAIN_CLASS_NAME" value="Password.PasswordTest" />
       <option name="METHOD_NAME" value="stringTest" />
-=======
-    <configuration name="NumberStringEngTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자문자열과영단어.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="숫자문자열과영단어" />
-      <option name="MAIN_CLASS_NAME" value="숫자문자열과영단어.NumberStringEngTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberStringEngTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자문자열과영단어.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="숫자문자열과영단어" />
-      <option name="MAIN_CLASS_NAME" value="숫자문자열과영단어.NumberStringEngTest" />
-      <option name="METHOD_NAME" value="solution" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -241,14 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
         <item itemvalue="JUnit.DartGameTest.solutionTest" />
         <item itemvalue="JUnit.PasswordTest.stringTest" />
-=======
-        <item itemvalue="JUnit.FailurerateTest.solution" />
-        <item itemvalue="JUnit.NumberStringEngTest" />
-        <item itemvalue="JUnit.NumberStringEngTest.solution" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
         <item itemvalue="Application.Cola" />
       </list>
     </recent_temporary>
@@ -270,7 +166,6 @@
       <workItem from="1678860536521" duration="489000" />
       <workItem from="1678861040515" duration="3861000" />
       <workItem from="1678865332315" duration="386000" />
-<<<<<<< HEAD
       <workItem from="1678865731148" duration="90000" />
       <workItem from="1678949822632" duration="427000" />
       <workItem from="1678950331088" duration="460000" />
@@ -287,11 +182,7 @@
       <workItem from="1678984481207" duration="167000" />
       <workItem from="1678984701849" duration="128000" />
       <workItem from="1678984842689" duration="65000" />
-      <workItem from="1679144943641" duration="320000" />
-=======
-      <workItem from="1678865731148" duration="1076000" />
-      <workItem from="1679012400565" duration="12075000" />
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
+      <workItem from="1679144943641" duration="3398000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
@@ -366,16 +257,5 @@
     </ignored-roots>
     <MESSAGE value="lv1" />
     <option name="LAST_COMMIT_MESSAGE" value="lv1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/programmers_lv1/src/Failurerate/Failurerate.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
