@@ -29,9 +29,9 @@ public class Billiards {
                     int y = startY - balls[i][1];
                     answer[i] = (int)(Math.pow(x,2)+Math.pow(y,2));
                 }
-            } else if () {
-                if(startX>balls[i][0] && startY > balls.[i][1])
-                 Math.pow(m-startX,2)+Math.pow(n-startY,2)+Math.pow(startX-balls[i][0])+Math.pow(startY-balls[i][1]) +
+            } else if (true) {
+//                if(startX>balls[i][0] && startY > balls.[i][1])
+//                 Math.pow(m-startX,2)+Math.pow(n-startY,2)+Math.pow(startX-balls[i][0])+Math.pow(startY-balls[i][1]) +
 
 
             }

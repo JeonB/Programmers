@@ -1,5 +1,5 @@
 package DartGame;
-<<<<<<< HEAD
+
 
 /*
 *다트 게임은 총 3번의 기회로 구성된다.
@@ -12,8 +12,7 @@ package DartGame;
 Single(S), Double(D), Triple(T)은 점수마다 하나씩 존재한다.
 스타상(*), 아차상(#)은 점수마다 둘 중 하나만 존재할 수 있으며, 존재하지 않을 수도 있다.
 */
-=======
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
+
 public class DartGame {
     public int solution(String dartResult) {
         int answer = 0;
@@ -46,10 +45,7 @@ public class DartGame {
                 if(j>1){
                     int k = j-2;
                     num[k] = num[k]*2;
-<<<<<<< HEAD
-=======
 
->>>>>>> 22728a67fe4b127bd45083de2c1f6a9e3ead5689
                 }
             } else if(dartResult.charAt(i)=='#'){
                 num[j-1] = -num[j-1];
