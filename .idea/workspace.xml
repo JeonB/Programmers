@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/공원산책/Park.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/공원산책/ParkTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/개인정보수집유효기간/Privacies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/개인정보수집유효기간/privaciesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programmers_lv1/src/공원산책/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/programmers_lv1/src/공원산책/Park.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +83,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="개인정보수집유효기간" />
       <recent name="공원산책" />
       <recent name="paint" />
       <recent name="Failurerate" />
       <recent name="숫자문자열과영단어" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParkTest.solution">
+  <component name="RunManager" selected="JUnit.privaciesTest.solution">
     <configuration name="DartGameTest.solutionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
@@ -117,21 +119,6 @@
       <option name="MAIN_CLASS_NAME" value="Failurerate.FailurerateTest" />
       <option name="METHOD_NAME" value="solution" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberStringEngTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자문자열과영단어.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="숫자문자열과영단어" />
-      <option name="MAIN_CLASS_NAME" value="숫자문자열과영단어.NumberStringEngTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,6 +155,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="privaciesTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="개인정보수집유효기간.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="개인정보수집유효기간" />
+      <option name="MAIN_CLASS_NAME" value="개인정보수집유효기간.privaciesTest" />
+      <option name="METHOD_NAME" value="solution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="programmers_lv1" />
       <method v="2">
@@ -183,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.privaciesTest.solution" />
         <item itemvalue="JUnit.ParkTest.solution" />
         <item itemvalue="JUnit.DartGameTest.solutionTest" />
         <item itemvalue="JUnit.PaintTest.solution" />
         <item itemvalue="JUnit.FailurerateTest.solution" />
-        <item itemvalue="JUnit.NumberStringEngTest" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +225,9 @@
       <workItem from="1679478852314" duration="41000" />
       <workItem from="1679617851271" duration="1043000" />
       <workItem from="1679618908900" duration="84000" />
-      <workItem from="1679635526645" duration="16249000" />
+      <workItem from="1679635526645" duration="17380000" />
+      <workItem from="1679965534158" duration="164000" />
+      <workItem from="1679986953984" duration="13061000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
@@ -307,9 +312,9 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/programmers_lv1/src/공원산책/Park.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/programmers_lv1/src/개인정보수집유효기간/Privacies.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

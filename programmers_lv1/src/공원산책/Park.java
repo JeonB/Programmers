@@ -5,11 +5,9 @@ import java.util.Arrays;
 public class Park {
     public String solution(String[] park, String[] routes) {
         int[] answer = new int[2];
-        int n = park.length;
         int pos = 0;
         int index = 0;
-        boolean hasS = true;
-        for (int i = 0 ; i<n;i++){
+        for (int i = 0 ; i<park.length;i++){
             if(park[i].contains("S")){
                 answer[1]+= park[i].indexOf('S');
                 pos = park[i].indexOf('S');
@@ -37,7 +35,7 @@ public class Park {
             }
             else if(route[0].equals("E")) {
 
-                if (!(answer[1] + Integer.parseInt(route[1]) > park[index].length()-1)&& !(park[index].substring(pos , range).contains("X")))
+                if (!(answer[1] + Integer.parseInt(route[1]) >= park[index].length()-1)&& !(park[index].substring(pos , range).contains("X")))
                 {
                     answer[1] += Integer.parseInt(route[1]);
                     pos = 0;
