@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/크레인인형뽑기/크레인인형뽑기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/test/크레인인형뽑기/크레인인형뽑기Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,19 +62,17 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "11 (2)",
-    "last_opened_file_path": "C:/Users/jeon/Desktop/프로그래머스",
+    "last_opened_file_path": "C:/Users/tj/Desktop/projects/Programmers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\JeonB\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,37 +81,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="크레인인형뽑기" />
-      <recent name="DartGame" />
+      <recent name="개인정보수집유효기간" />
+      <recent name="공원산책" />
+      <recent name="paint" />
+      <recent name="Failurerate" />
+      <recent name="숫자문자열과영단어" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.크레인인형뽑기Test.solution">
-    <configuration name="Babbling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Babbling.Babbling" />
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Babbling.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Cola" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Cola.Cola" />
-      <module name="programmers_lv1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Cola.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.privaciesTest.solution">
     <configuration name="DartGameTest.solutionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
@@ -132,32 +105,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordTest.stringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FailurerateTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Password.*" />
+          <option name="PATTERN" value="Failurerate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Password" />
-      <option name="MAIN_CLASS_NAME" value="Password.PasswordTest" />
-      <option name="METHOD_NAME" value="stringTest" />
+      <option name="PACKAGE_NAME" value="Failurerate" />
+      <option name="MAIN_CLASS_NAME" value="Failurerate.FailurerateTest" />
+      <option name="METHOD_NAME" value="solution" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="크레인인형뽑기Test.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaintTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="programmers_lv1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="크레인인형뽑기.*" />
+          <option name="PATTERN" value="paint.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="크레인인형뽑기" />
-      <option name="MAIN_CLASS_NAME" value="크레인인형뽑기.크레인인형뽑기Test" />
+      <option name="PACKAGE_NAME" value="paint" />
+      <option name="MAIN_CLASS_NAME" value="paint.PaintTest" />
+      <option name="METHOD_NAME" value="solution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="공원산책.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="공원산책" />
+      <option name="MAIN_CLASS_NAME" value="공원산책.ParkTest" />
+      <option name="METHOD_NAME" value="solution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="privaciesTest.solution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmers_lv1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="개인정보수집유효기간.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="개인정보수집유효기간" />
+      <option name="MAIN_CLASS_NAME" value="개인정보수집유효기간.privaciesTest" />
       <option name="METHOD_NAME" value="solution" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -165,11 +170,13 @@
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
+      <module name="programmers_lv1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="programmers_lv1" />
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.크레인인형뽑기Test.solution" />
+        <item itemvalue="JUnit.privaciesTest.solution" />
+        <item itemvalue="JUnit.ParkTest.solution" />
         <item itemvalue="JUnit.DartGameTest.solutionTest" />
-        <item itemvalue="Application.Babbling" />
-        <item itemvalue="JUnit.PasswordTest.stringTest" />
-        <item itemvalue="Application.Cola" />
+        <item itemvalue="JUnit.PaintTest.solution" />
+        <item itemvalue="JUnit.FailurerateTest.solution" />
       </list>
     </recent_temporary>
   </component>
@@ -202,27 +209,25 @@
       <workItem from="1678860536521" duration="489000" />
       <workItem from="1678861040515" duration="3861000" />
       <workItem from="1678865332315" duration="386000" />
-      <workItem from="1678865731148" duration="90000" />
-      <workItem from="1678949822632" duration="427000" />
-      <workItem from="1678950331088" duration="460000" />
-      <workItem from="1678961219502" duration="3628000" />
-      <workItem from="1678965227079" duration="77000" />
-      <workItem from="1678965442612" duration="349000" />
-      <workItem from="1678965808608" duration="62000" />
-      <workItem from="1678965990593" duration="105000" />
-      <workItem from="1678966159604" duration="796000" />
-      <workItem from="1678967047408" duration="967000" />
-      <workItem from="1678968188907" duration="80000" />
-      <workItem from="1678968282352" duration="1205000" />
-      <workItem from="1678983283969" duration="360000" />
-      <workItem from="1678984481207" duration="167000" />
-      <workItem from="1678984701849" duration="128000" />
-      <workItem from="1678984842689" duration="65000" />
-      <workItem from="1679144943641" duration="3398000" />
-      <workItem from="1679241410863" duration="4223000" />
-      <workItem from="1679580927206" duration="1092000" />
-      <workItem from="1680094489642" duration="609000" />
-      <workItem from="1680095237326" duration="7339000" />
+      <workItem from="1678865731148" duration="1076000" />
+      <workItem from="1679012400565" duration="12117000" />
+      <workItem from="1679474475287" duration="2792000" />
+      <workItem from="1679477320243" duration="25000" />
+      <workItem from="1679477347626" duration="67000" />
+      <workItem from="1679477418627" duration="243000" />
+      <workItem from="1679477667354" duration="19000" />
+      <workItem from="1679477705033" duration="341000" />
+      <workItem from="1679478052850" duration="50000" />
+      <workItem from="1679478112970" duration="328000" />
+      <workItem from="1679478450947" duration="388000" />
+      <workItem from="1679478852314" duration="41000" />
+      <workItem from="1679617851271" duration="1043000" />
+      <workItem from="1679618908900" duration="84000" />
+      <workItem from="1679635526645" duration="17380000" />
+      <workItem from="1679965534158" duration="164000" />
+      <workItem from="1679986953984" duration="13302000" />
+      <workItem from="1680051597293" duration="77000" />
+      <workItem from="1680170922580" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
@@ -297,5 +302,16 @@
     </ignored-roots>
     <MESSAGE value="lv1" />
     <option name="LAST_COMMIT_MESSAGE" value="lv1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/programmers_lv1/src/Failurerate/Failurerate.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
