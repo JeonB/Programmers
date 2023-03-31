@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1">
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/바탕화면정리/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/비밀지도/SecretMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programmers_lv1/src/핸드폰번호가리기/PhoneNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fb33bd6f-6146-48b0-ab09-a5e13988db33" name="Changes" comment="lv1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +230,7 @@
       <workItem from="1680051597293" duration="77000" />
       <workItem from="1680170922580" duration="937000" />
       <workItem from="1680171870128" duration="20000" />
-      <workItem from="1680232156726" duration="2999000" />
+      <workItem from="1680232156726" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="lv1">
       <created>1678858550197</created>
