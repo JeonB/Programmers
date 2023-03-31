@@ -3,7 +3,7 @@ package 비밀지도;
 import java.util.Arrays;
 
 public class SecretMap {
-
+  //프로그래머스 비밀지도
   public static void main(String[] args) {
     int[] arr1 = { 9, 20, 28, 18, 11 };
     int[] arr2 = { 30, 1, 21, 17, 28 };
