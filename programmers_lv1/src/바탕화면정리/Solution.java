@@ -2,7 +2,7 @@ package 바탕화면정리;
 
 import java.util.Arrays;
 
-public class test {
+public class Solution {
 
   public static void main(String[] args) {
     String[] wallpaper = {
