@@ -1,8 +1,10 @@
 package april_4_9.최솟값만들기;
 
+import java.util.Arrays;
+
 public class Solution
 {
-    //두 배열의 원소를 뽑아 곱하여 나온1 값을 합하여 누적된 합값이 최솟값이 되도록하는 메소드
+    //두 배열의 원소를 하나씩 각각 뽑아 곱한 값들의 합이 최솟값이 되도록 하는 메소드
     //두 배열의 길이는 같으며 K번 째 원소를 뽑았으면 재사용 불가
     public int solution(int []A, int []B)
     {
@@ -33,14 +35,13 @@ public class Solution
         //     }
         // }
 
-//        Arrays.sort(A);
+//        Arrays.sort(A); dual pivot 퀵소트(Arrays의 메소드)
 //        Arrays.sort(B);
         quickSort(A,0,A.length-1);
         quickSort(B,0,B.length-1);
         for (int i = 0; i < A.length; i++) {
             answer += A[i] * B[A.length - 1 - i];
         }
-
         return answer;
     }
 

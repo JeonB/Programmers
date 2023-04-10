@@ -1,6 +1,8 @@
 package april_4_9.타일만들기;
 
 public class Solution {
+
+    // 점화식을 세워 DP를 이용하여 문제 풀이
     public int solution(int n){
         int answer = 0;
         int[] dp = new int[n + 1];
