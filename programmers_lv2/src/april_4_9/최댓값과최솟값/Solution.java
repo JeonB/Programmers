@@ -49,8 +49,8 @@ public class Solution {
 
         // 정렬 끝난 후 나누어진 두개의 그룹에 데이터 수를 체크
         if (left < pr)
-            quickSort(data, left, pr); // left가 pr보다 작으면 그룹의 수가 1개 이상이기 때문에 다시 정렬
+            quickSort(data, left, pr); // left가 pr보다 작으면 그룹의 수가 2개 이상이기 때문에 다시 정렬
         if (pl < right)
-            quickSort(data, pl, right); // pl이 right보다 작으면 그룹의 수가 1개 이상이기 때문에 다시 정렬
+            quickSort(data, pl, right); // pl이 right보다 작으면 그룹의 수가 2개 이상이기 때문에 다시 정렬
     }
 }
