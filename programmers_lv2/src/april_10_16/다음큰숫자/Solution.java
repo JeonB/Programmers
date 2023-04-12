@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Solution {
     // 직접 비트를 옮겨 본 헛짓거리 메소드. 1의 개수를 구하는게 힌트다.
+    // split(), join()
     public static int solution(int n) {
         int answer = 0;
         boolean flag = true;
