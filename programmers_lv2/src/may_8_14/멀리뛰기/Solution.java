@@ -1,11 +1,13 @@
 package may_8_14.멀리뛰기;
 
 class Solution {
+    
     public long solution(int n) {
         //2칸 또는 1칸만 이동 가능
         // 2칸씩 최대로 갈 수 있는 경우의 수부터 구해보자
         // 최대 경우의 수에서 2의 개수를 하나씩 줄여서 조합으로 구해보기
         // ex) 10칸일 때 2칸씩 4번 1칸씩 2번가능 6C2
+        // 조합으로 결국 못 풂
         long answer = 0;
         int move = 0;  //1칸 이동 횟수
         int move2 = 0; //2칸 이동 횟수
