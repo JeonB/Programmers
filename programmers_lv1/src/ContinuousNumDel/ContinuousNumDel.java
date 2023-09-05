@@ -58,4 +58,24 @@ public class ContinuousNumDel {
      */
     return answer;
   }
+
+  public int[] solution3(int []arr) {
+
+    Stack<Integer> st = new Stack<>();
+    for(int num : arr){
+      if(st.isEmpty()){
+        st.push(num);
+      }
+      else if(!st.contains(num) || st.peek() != num){
+        st.push(num);
+      }
+    }
+    Integer[] tempArr = st.toArray(new Integer[st.size()]);
+    int[] answer = new int[tempArr.length];
+    for(int i = 0; i < tempArr.length ; i++){
+      answer[i] = tempArr[i];
+    }
+
+    return answer;
+  }
 }
