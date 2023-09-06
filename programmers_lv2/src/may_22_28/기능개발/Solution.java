@@ -1,9 +1,6 @@
 package may_22_28.기능개발;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
@@ -25,5 +22,48 @@ public class Solution {
         }
 
         return answer.stream().mapToInt(Integer::intValue).toArray();
+    }
+    //Stack으로 구현한 메소드
+    public int[] solution2(int[] progresses, int[] speeds) {
+
+        int[] dayList = new int[speeds.length];
+        ArrayList<Integer> answerList = new ArrayList<>();
+        for(int i = 0 ; i<speeds.length ; i++){
+            int cnt = 0;
+            while( progresses[i]<100){
+                progresses[i] += speeds[i];
+                cnt++;
+            }
+            dayList[i] = cnt;
+        }
+
+        int count = 1;
+
+        Stack<Integer> st = new Stack<>();
+        for(int i = 0 ; i < dayList.length ; i++){
+            if(i  == dayList.length-1 ){
+                if(st.peek() >= dayList[i]){
+                    count++;
+                    answerList.add(count);
+                }else{
+                    answerList.add(count);
+                    answerList.add(1);
+                }
+            }else{
+                if(st.isEmpty()){
+                    st.push(dayList[i]);
+                }else if(st.peek() >= dayList[i]){
+                    count++;
+                }
+                else{
+                    st.push(dayList[i]);
+                    answerList.add(count);
+                    count = 1;
+                }
+            }
+        }
+
+        int[] answer = answerList.stream().mapToInt(x->x).toArray();
+        return answer;
     }
 }
