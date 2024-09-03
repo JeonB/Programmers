@@ -4,7 +4,7 @@ class Solution {
        // DP 배열 초기화: N을 i번 사용해서 만들 수 있는 숫자의 집합
         Set<Integer>[] dp = new HashSet[9];
         
-        for (int i = 0; i < 9; i++) {
+        for (int i = 1; i < 9; i++) {
             dp[i] = new HashSet<>();
         }
         
