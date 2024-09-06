@@ -27,7 +27,7 @@ class Solution {
             }
         }
         
-        if(minHeap.isEmpty() && maxHeap.isEmpty()) return new int[]{0,0};
+        if(minHeap.isEmpty() ) return new int[]{0,0};
         
         answer = new int[]{maxHeap.peek(),minHeap.peek()};
         return answer;
