@@ -3,46 +3,52 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
-
 public class Test {
+    static boolean[] visited;
+    static ArrayList<ArrayList<Integer>> list;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());  // 데이터 개수
-        int L = Integer.parseInt(st.nextToken());  // 최솟값 구하는 범위
-        Deque<Node> deque = new ArrayDeque<>();
-        st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());  // 노드 개수
+        int M = Integer.parseInt(st.nextToken());  // 간선 수
 
-        for(int i = 0; i < N; i++) {
-            int current = Integer.parseInt(st.nextToken());
-            while(!deque.isEmpty() && deque.getLast().value > current){
-                deque.removeLast();
-            }
-            deque.addLast(new Node(current, i));
-            if(deque.getFirst().index <= i - L){
-                deque.removeFirst();
-            }
-
-            bw.write(deque.getFirst().value + " ");
+        int answer = 0;
+        visited = new boolean[N+1];
+        list = new ArrayList<>();
+        for(int i = 0; i <= N; i++) {
+            list.add(new ArrayList<>());
         }
-
-
+        for(int i = 0 ; i<M;i++){
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            list.get(a).add(b);
+            list.get(b).add(a);
+        }
+        for(int i = 1 ; i<=N;i++){
+            if(visited[i]) continue;
+            else{
+                answer++;
+                dfs(i);
+            }
+        }
+        bw.write(answer + "\n");
         bw.flush();
         bw.close();
         br.close();
     }
 
-}
-class Node{
-    int value;
-    int index;
-    Node(int value, int index){
-        this.value = value;
-        this.index = index;
+    static void dfs(int v){
+        if(visited[v]) return;
+        visited[v] = true;
+        for(int i : list.get(v)){
+            if(!visited[i]){
+                dfs(i);
+            }
+        }
     }
 }
