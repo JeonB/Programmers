@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 public class Test {
     static boolean[] visited;
     static ArrayList<ArrayList<Integer>> list;
@@ -12,43 +11,40 @@ public class Test {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());  // 노드 개수
-        int M = Integer.parseInt(st.nextToken());  // 간선 수
-
-        int answer = 0;
-        visited = new boolean[N+1];
-        list = new ArrayList<>();
-        for(int i = 0; i <= N; i++) {
-            list.add(new ArrayList<>());
-        }
-        for(int i = 0 ; i<M;i++){
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            list.get(a).add(b);
-            list.get(b).add(a);
-        }
-        for(int i = 1 ; i<=N;i++){
-            if(visited[i]) continue;
-            else{
-                answer++;
-                dfs(i);
+        int N = Integer.parseInt(br.readLine());  // 노드 개수
+        for(int i = 0; i<N ; i++){
+            for(int j = 0; j<N ; j++){
+                bw.write("@@@@@");
             }
+            bw.write("\n");
         }
-        bw.write(answer + "\n");
+        for(int i = 0; i<N ; i++){
+            for(int j = 0; j<N ; j++){
+                bw.write("@");
+            }
+            bw.write("\n");
+        }
+        for(int i = 0; i<N ; i++){
+            for(int j = 0; j<N ; j++){
+                bw.write("@@@@@");
+            }
+            bw.write("\n");
+        }
+        for(int i = 0; i<N ; i++){
+            for(int j = 0; j<N ; j++){
+                bw.write("@");
+            }
+            bw.write("\n");
+        }
+        for(int i = 0; i<N ; i++){
+            for(int j = 0; j<N ; j++){
+                bw.write("@@@@@");
+            }
+            bw.write("\n");
+        }
+
         bw.flush();
         bw.close();
         br.close();
-    }
-
-    static void dfs(int v){
-        if(visited[v]) return;
-        visited[v] = true;
-        for(int i : list.get(v)){
-            if(!visited[i]){
-                dfs(i);
-            }
-        }
     }
 }
