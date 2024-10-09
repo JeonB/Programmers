@@ -1,22 +1,16 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    static class Node {
-        int city;
-        int time;
 
-        public Node(int city, int time) {
-            this.city = city;
-            this.time = time;
+    // 도시를 표현할 클래스
+    static class Edge {
+        int node;
+        long cost;
+
+        Edge(int node, long cost) {
+            this.node = node;
+            this.cost = cost;
         }
     }
 
@@ -24,55 +18,55 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        // 첫째 줄 입력
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken()); // 도시의 수
-        int m = Integer.parseInt(st.nextToken()); // 도로의 수
-        int k = Integer.parseInt(st.nextToken()); // k번째 최단경로
+        int n = Integer.parseInt(st.nextToken());  // 도시의 개수
+        int m = Integer.parseInt(st.nextToken());  // 도로의 개수
+        int k = Integer.parseInt(st.nextToken());  // k번째 최단 경로
 
-        List<Node>[] graph = new ArrayList[n + 1];
+        // 인접 리스트를 사용한 그래프 표현
+        List<Edge>[] graph = new ArrayList[n + 1];
         for (int i = 1; i <= n; i++) {
             graph[i] = new ArrayList<>();
         }
 
-        // 도로 입력 받기
+        // m개의 도로 정보 입력
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
-            graph[a].add(new Node(b, c));
+            graph[a].add(new Edge(b, c));
         }
 
-        // 각 도시까지의 k번째 최단 경로 시간을 저장하는 우선순위 큐 배열
-        PriorityQueue<Integer>[] dist = new PriorityQueue[n + 1];
+        // 각 도시로 가는 k번째 최단 경로를 저장하는 리스트
+        PriorityQueue<Long>[] dist = new PriorityQueue[n + 1];
         for (int i = 1; i <= n; i++) {
-            dist[i] = new PriorityQueue<>(k, Collections.reverseOrder()); // 최대 k개의 경로를 저장하며 내림차순 정렬
+            dist[i] = new PriorityQueue<>(Collections.reverseOrder());  // 최대 힙
         }
 
-        // 다익스트라 알고리즘 시작 (람다식을 사용한 노드 비교)
-        PriorityQueue<Node> pq = new PriorityQueue<>((o1, o2) -> Integer.compare(o1.time, o2.time));
-        pq.add(new Node(1, 0)); // 시작 도시는 1번
-
-        dist[1].add(0); // 시작 도시는 소요시간 0
+        // 우선순위 큐를 사용한 다익스트라 알고리즘
+        PriorityQueue<Edge> pq = new PriorityQueue<>((e1, e2) -> Long.compare(e1.cost, e2.cost));
+        pq.add(new Edge(1, 0));
+        dist[1].add(0L);
 
         while (!pq.isEmpty()) {
-            Node current = pq.poll();
-            int currentCity = current.city;
-            int currentTime = current.time;
+            Edge current = pq.poll();
+            int now = current.node;
+            long nowCost = current.cost;
 
-            // 현재 도시에서 연결된 다른 도시로의 경로 계산
-            for (Node next : graph[currentCity]) {
-                int nextCity = next.city;
-                int nextTime = currentTime + next.time;
+            // 현재 도시에서 갈 수 있는 모든 도로에 대해 경로 계산
+            for (Edge next : graph[now]) {
+                long newCost = nowCost + next.cost;
 
-                // dist[nextCity]에 저장된 최단경로 중 k번째보다 작은 경로가 있으면 추가
-                if (dist[nextCity].size() < k) {
-                    dist[nextCity].add(nextTime);
-                    pq.add(new Node(nextCity, nextTime));
-                } else if (dist[nextCity].peek() > nextTime) {
-                    dist[nextCity].poll();
-                    dist[nextCity].add(nextTime);
-                    pq.add(new Node(nextCity, nextTime));
+                // next.node로 가는 경로 중 k번째 최단 경로를 업데이트
+                if (dist[next.node].size() < k) {
+                    dist[next.node].add(newCost);
+                    pq.add(new Edge(next.node, newCost));
+                } else if (dist[next.node].peek() > newCost) {
+                    dist[next.node].poll();
+                    dist[next.node].add(newCost);
+                    pq.add(new Edge(next.node, newCost));
                 }
             }
         }
@@ -80,9 +74,9 @@ public class Main {
         // 결과 출력
         for (int i = 1; i <= n; i++) {
             if (dist[i].size() == k) {
-                bw.write(dist[i].peek() + "\n"); // k번째 최단경로 출력
+                bw.write(dist[i].peek() + "\n");
             } else {
-                bw.write("-1\n"); // k번째 최단경로가 존재하지 않으면 -1 출력
+                bw.write("-1\n");
             }
         }
 
