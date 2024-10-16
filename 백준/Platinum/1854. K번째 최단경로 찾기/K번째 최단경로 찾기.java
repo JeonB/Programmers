@@ -1,82 +1,74 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
 
-public class Main {
+class Main {
 
-    // 도시를 표현할 클래스
     static class Edge {
-        int node;
-        long cost;
+        int v;
+        int w;
 
-        Edge(int node, long cost) {
-            this.node = node;
-            this.cost = cost;
+        public Edge(int v, int w) {
+            this.v = v;
+            this.w = w;
         }
     }
+
+    static PriorityQueue<Integer>[] distance;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // 첫째 줄 입력
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());  // 도시의 개수
-        int m = Integer.parseInt(st.nextToken());  // 도로의 개수
-        int k = Integer.parseInt(st.nextToken());  // k번째 최단 경로
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
 
-        // 인접 리스트를 사용한 그래프 표현
-        List<Edge>[] graph = new ArrayList[n + 1];
-        for (int i = 1; i <= n; i++) {
-            graph[i] = new ArrayList<>();
+        ArrayList<ArrayList<Edge>> graph = new ArrayList<>();
+
+        for (int i = 0; i <= N; i++) {
+            graph.add(new ArrayList<>());
         }
-
-        // m개의 도로 정보 입력
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
-            graph[a].add(new Edge(b, c));
+            graph.get(a).add(new Edge(b, c));
+        }
+        distance = new PriorityQueue[N + 1];
+        for (int i = 1; i <= N; i++) {
+            distance[i] = new PriorityQueue<>(K, (a, b) -> b - a);
         }
 
-        // 각 도시로 가는 k번째 최단 경로를 저장하는 리스트
-        PriorityQueue<Long>[] dist = new PriorityQueue[n + 1];
-        for (int i = 1; i <= n; i++) {
-            dist[i] = new PriorityQueue<>(Collections.reverseOrder());  // 최대 힙
-        }
-
-        // 우선순위 큐를 사용한 다익스트라 알고리즘
-        PriorityQueue<Edge> pq = new PriorityQueue<>((e1, e2) -> Long.compare(e1.cost, e2.cost));
+        PriorityQueue<Edge> pq = new PriorityQueue<>((a, b) -> a.w - b.w);
         pq.add(new Edge(1, 0));
-        dist[1].add(0L);
-
+        distance[1].add(0);
         while (!pq.isEmpty()) {
-            Edge current = pq.poll();
-            int now = current.node;
-            long nowCost = current.cost;
-
-            // 현재 도시에서 갈 수 있는 모든 도로에 대해 경로 계산
-            for (Edge next : graph[now]) {
-                long newCost = nowCost + next.cost;
-
-                // next.node로 가는 경로 중 k번째 최단 경로를 업데이트
-                if (dist[next.node].size() < k) {
-                    dist[next.node].add(newCost);
-                    pq.add(new Edge(next.node, newCost));
-                } else if (dist[next.node].peek() > newCost) {
-                    dist[next.node].poll();
-                    dist[next.node].add(newCost);
-                    pq.add(new Edge(next.node, newCost));
+            Edge cur = pq.poll();
+            for (Edge next : graph.get(cur.v)) {
+                if (distance[next.v].size() < K) {
+                    distance[next.v].add(cur.w + next.w);
+                    pq.add(new Edge(next.v, cur.w + next.w));
+                } else if (distance[next.v].peek() > cur.w + next.w) {
+                    distance[next.v].poll();
+                    distance[next.v].add(cur.w + next.w);
+                    pq.add(new Edge(next.v, cur.w + next.w));
                 }
             }
         }
 
-        // 결과 출력
-        for (int i = 1; i <= n; i++) {
-            if (dist[i].size() == k) {
-                bw.write(dist[i].peek() + "\n");
-            } else {
+        for (int i = 1; i <= N; i++) {
+            if (distance[i].size() < K) {
                 bw.write("-1\n");
+            } else {
+                bw.write(distance[i].peek() + "\n");
             }
         }
 
@@ -84,4 +76,5 @@ public class Main {
         bw.close();
         br.close();
     }
+
 }
