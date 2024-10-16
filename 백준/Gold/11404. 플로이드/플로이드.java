@@ -23,7 +23,6 @@ class Main {
                 }
             }
         }
-        
         StringTokenizer st;
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
@@ -38,11 +37,11 @@ class Main {
         for (int k = 1; k <= N; k++) {
             for (int i = 1; i <= N; i++) {
                 for (int j = 1; j <= N; j++) {
-                    // 오버플로우 방지
-                    if (edges[i][k] != Integer.MAX_VALUE && edges[k][j] != Integer.MAX_VALUE) {
-                        if (edges[i][j] > edges[i][k] + edges[k][j]) {
-                            edges[i][j] = edges[i][k] + edges[k][j];
-                        }
+                    if (edges[i][k] == Integer.MAX_VALUE || edges[k][j] == Integer.MAX_VALUE) {
+                        continue;
+                    }
+                    if (edges[i][j] > edges[i][k] + edges[k][j]) {
+                        edges[i][j] = edges[i][k] + edges[k][j];
                     }
                 }
             }
@@ -63,4 +62,5 @@ class Main {
         bw.close();
         br.close();
     }
+
 }
