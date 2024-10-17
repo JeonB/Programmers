@@ -1,72 +1,77 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
-public class Main {
-    static class BusRoute {
-        int start, end, time;
+class Main {
+    static class Edge {
+        int start;
+        int end;
+        int weight;
 
-        BusRoute(int start, int end, int time) {
+        Edge(int start, int end, int weight) {
             this.start = start;
             this.end = end;
-            this.time = time;
+            this.weight = weight;
         }
     }
 
-    static int N, M;
-    static BusRoute[] busRoutes;
-    static long[] dist;
-    static final long INF = Long.MAX_VALUE;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
-        M = sc.nextInt();
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
-        busRoutes = new BusRoute[M];
-        dist = new long[N + 1];
-        Arrays.fill(dist, INF);
-        dist[1] = 0; // 1번 도시에서 출발
-
+        ArrayList<Edge> edges = new ArrayList<>();
+        long[] distance = new long[N + 1];
+        for (int i = 0; i <= N; i++) {
+            distance[i] = Long.MAX_VALUE;
+        }
+        distance[1] = 0;
         for (int i = 0; i < M; i++) {
-            int A = sc.nextInt();
-            int B = sc.nextInt();
-            int C = sc.nextInt();
-            busRoutes[i] = new BusRoute(A, B, C);
+            st = new StringTokenizer(br.readLine());
+            int start = Integer.parseInt(st.nextToken());
+            int end = Integer.parseInt(st.nextToken());
+            int weight = Integer.parseInt(st.nextToken());
+            edges.add(new Edge(start, end, weight));
         }
 
-        // 벨만-포드 알고리즘
-        boolean hasNegativeCycle = bellmanFord();
-
-        if (hasNegativeCycle) {
-            System.out.println("-1");
-        } else {
-            for (int i = 2; i <= N; i++) {
-                if (dist[i] == INF) {
-                    System.out.println("-1");
-                } else {
-                    System.out.println(dist[i]);
-                }
-            }
-        }
-        sc.close();
-    }
-
-    static boolean bellmanFord() {
-        // N-1번 반복
         for (int i = 0; i < N - 1; i++) {
-            for (BusRoute route : busRoutes) {
-                if (dist[route.start] != INF && dist[route.end] > dist[route.start] + route.time) {
-                    dist[route.end] = dist[route.start] + route.time;
+            for (Edge edge : edges) {
+                if (distance[edge.start] != Long.MAX_VALUE
+                        && distance[edge.end] > distance[edge.start] + edge.weight) {
+                    distance[edge.end] = distance[edge.start] + edge.weight;
                 }
             }
         }
 
-        // 음수 사이클 확인
-        for (BusRoute route : busRoutes) {
-            if (dist[route.start] != INF && dist[route.end] > dist[route.start] + route.time) {
-                return true; // 음수 사이클 존재
+        for (Edge edge : edges) {
+            if (distance[edge.start] != Long.MAX_VALUE
+                    && distance[edge.end] > distance[edge.start] + edge.weight) {
+                bw.write("-1\n");
+                bw.flush();
+                bw.close();
+                br.close();
+                return;
             }
         }
-        return false; // 음수 사이클 없음
+
+        for (int i = 2; i <= N; i++) {
+            if (distance[i] == Long.MAX_VALUE) {
+                bw.write("-1\n");
+            } else {
+                bw.write(distance[i] + "\n");
+            }
+        }
+
+        bw.flush();
+        bw.close();
+        br.close();
     }
+
 }
