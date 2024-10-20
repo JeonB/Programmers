@@ -47,18 +47,15 @@ public class Main {
             sum += positive.get(positive.size() - 1);
         }
 
-        // 음수는 작은 것끼리 곱해줌
         for (int i = 0; i < negative.size() - 1; i += 2) {
             sum += negative.get(i) * negative.get(i + 1);
         }
-        // 남는 음수는 0이 있으면 묶어 0으로 만들고, 없으면 그냥 더해줌
         if (negative.size() % 2 == 1) {
             if (zeroCount == 0) {
                 sum += negative.get(negative.size() - 1);
             }
         }
 
-        // 1의 개수는 그대로 더해줌
         sum += oneCount;
 
         bw.write(sum + "\n");
