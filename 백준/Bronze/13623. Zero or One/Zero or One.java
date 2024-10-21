@@ -1,8 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,17 +13,18 @@ public class Main {
         int B = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
 
-        if( A == B && B == C) bw.write('*');
-        else if( B == C) bw.write('A');
-        else if( A == C) bw.write('B');
-        else if( A == B) bw.write('C');
-
-
+        if (A == B && B == C)
+            bw.write('*');
+        else if (B == C)
+            bw.write('A');
+        else if (A == C)
+            bw.write('B');
+        else if (A == B)
+            bw.write('C');
 
         bw.flush();
         bw.close();
         br.close();
     }
 
- }
-
+}

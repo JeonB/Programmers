@@ -1,8 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,15 +16,11 @@ public class Main {
         int E = Integer.parseInt(st.nextToken());
         int F = Integer.parseInt(st.nextToken());
 
-
-
-        bw.write((A + B + C+ D+E+F)  * 5 + "\n");
+        bw.write((A + B + C + D + E + F) * 5 + "\n");
 
         bw.flush();
         bw.close();
         br.close();
     }
 
-
 }
-

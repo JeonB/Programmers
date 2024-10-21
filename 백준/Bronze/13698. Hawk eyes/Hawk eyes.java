@@ -1,8 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -12,14 +11,16 @@ public class Main {
         int big = 0;
         int small = 0;
 
-        int[] yabawi = {1, 0, 0, 4};
+        int[] yabawi = { 1, 0, 0, 4 };
 
-        for(char c : shake.toCharArray()){
+        for (char c : shake.toCharArray()) {
             swap(c, yabawi);
         }
-        for(int i = 0 ;i<yabawi.length ;i++){
-            if(yabawi[i] == 4) big = i + 1;
-            else if(yabawi[i] == 1) small = i + 1;
+        for (int i = 0; i < yabawi.length; i++) {
+            if (yabawi[i] == 4)
+                big = i + 1;
+            else if (yabawi[i] == 1)
+                small = i + 1;
         }
         bw.write(small + "\n" + big);
 
@@ -28,9 +29,9 @@ public class Main {
         br.close();
     }
 
-    public static int[] swap(char c, int[] yabawi){
+    public static int[] swap(char c, int[] yabawi) {
         int temp;
-        switch (c){
+        switch (c) {
             case 'A':
                 temp = yabawi[0];
                 yabawi[0] = yabawi[1];
@@ -65,5 +66,4 @@ public class Main {
         }
         return yabawi;
     }
- }
-
+}
