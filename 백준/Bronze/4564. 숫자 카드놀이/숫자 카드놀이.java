@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 /**
  * Main
  */
-public class Main {
+class Main {
 
     public static void main(String[] args) throws IOException {
 
@@ -15,14 +15,14 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String S = br.readLine();
-        while(Integer.parseInt(S) != 0){
+        while (Integer.parseInt(S) != 0) {
             bw.write(S + " ");
-            while(S.length() > 1){
+            while (S.length() > 1) {
                 int result = 1;
-                for(int i = 0 ; i < S.length() ; i++){
+                for (int i = 0; i < S.length(); i++) {
                     result *= S.charAt(i) - '0';
                 }
-                S = Integer.toString(result); 
+                S = Integer.toString(result);
                 bw.write(S + " ");
             }
             bw.write("\n");

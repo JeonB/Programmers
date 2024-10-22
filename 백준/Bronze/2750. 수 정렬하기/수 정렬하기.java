@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 /**
  * Main
  */
-public class Main {
+class Main {
 
     public static void main(String[] args) throws IOException {
 
@@ -18,10 +18,10 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
         PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        for(int i = 0 ; i < N ; i++){
+        for (int i = 0; i < N; i++) {
             pq.add(Integer.parseInt(br.readLine()));
         }
-        for(int i = 0 ; i < N ; i++){
+        for (int i = 0; i < N; i++) {
             bw.write(pq.poll() + "\n");
         }
 
