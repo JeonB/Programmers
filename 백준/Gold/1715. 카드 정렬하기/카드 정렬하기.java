@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.PriorityQueue;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -14,18 +14,18 @@ public class Main {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        for(int i = 0 ; i < n ; i++){
+        for (int i = 0; i < n; i++) {
             int card = Integer.parseInt(br.readLine());
             pq.add(card);
         }
 
-        int sum =0;
+        int sum = 0;
 
-        while(pq.size() > 1){
+        while (pq.size() > 1) {
             int a = pq.poll();
             int b = pq.poll();
-            sum += a+b;
-            pq.add(a+b);
+            sum += a + b;
+            pq.add(a + b);
         }
 
         bw.write(sum + "\n");

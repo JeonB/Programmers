@@ -9,14 +9,14 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());  // 보석의 개수
-        int K = Integer.parseInt(st.nextToken());  // 가방의 개수
+        int N = Integer.parseInt(st.nextToken()); // 보석의 개수
+        int K = Integer.parseInt(st.nextToken()); // 가방의 개수
 
         // 보석의 무게와 가치를 각각 배열로 분리하여 저장
         int[] weights = new int[N];

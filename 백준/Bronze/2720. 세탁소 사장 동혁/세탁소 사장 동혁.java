@@ -2,8 +2,7 @@
 import java.util.*;
 import java.io.*;
 
-
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,18 +21,18 @@ public class Main {
         for (int i = 0; i < N; i++) {
             int charge = Integer.parseInt(br.readLine());
             int[] charges = new int[4];
-            while(charge>0){
-                if(charge>=QUATER){
-                    charges[0] =charge/QUATER;
+            while (charge > 0) {
+                if (charge >= QUATER) {
+                    charges[0] = charge / QUATER;
                     charge -= QUATER * charges[0];
-                }else if(charge>=DIME){
-                    charges[1] =charge/DIME;
+                } else if (charge >= DIME) {
+                    charges[1] = charge / DIME;
                     charge -= DIME * charges[1];
-                }else if(charge>=NICKEL){
-                    charges[2] =charge/NICKEL;
+                } else if (charge >= NICKEL) {
+                    charges[2] = charge / NICKEL;
                     charge -= NICKEL * charges[2];
-                }else{
-                    charges[3] =charge/PENNY;
+                } else {
+                    charges[3] = charge / PENNY;
                     charge -= PENNY * charges[3];
                 }
             }
@@ -53,5 +52,4 @@ public class Main {
         br.close();
     }
 
-    }
-
+}

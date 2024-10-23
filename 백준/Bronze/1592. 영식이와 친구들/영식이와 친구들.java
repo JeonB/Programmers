@@ -2,8 +2,7 @@
 import java.util.*;
 import java.io.*;
 
-
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,20 +18,23 @@ public class Main {
         int tossCount = 0;
         int idx = 0;
 
-        while(M> friends[idx]){
+        while (M > friends[idx]) {
             friends[idx]++;
-            if(friends[idx] == M){
+            if (friends[idx] == M) {
                 break;
             }
             tossCount++;
-            if(friends[idx] % 2 != 0){
+            if (friends[idx] % 2 != 0) {
                 idx += L;
-                if(idx>=N )idx %= N;
-            }else{
+                if (idx >= N)
+                    idx %= N;
+            } else {
                 idx -= L;
-                if( idx<0)idx += N;
+                if (idx < 0)
+                    idx += N;
             }
-        };
+        }
+        ;
 
         bw.write(tossCount + "\n");
 
@@ -41,5 +43,4 @@ public class Main {
         br.close();
     }
 
-    }
-
+}
