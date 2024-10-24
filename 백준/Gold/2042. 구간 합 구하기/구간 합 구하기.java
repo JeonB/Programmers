@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
-    static long[] arr; 
-    static long[] tree; 
+class Main {
+    static long[] arr;
+    static long[] tree;
 
     // 세그먼트 트리 빌드
     public static long init(int node, int start, int end) {
@@ -43,7 +43,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        
+
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
@@ -70,7 +70,7 @@ public class Main {
                 arr[b] = c; // 배열 값 갱신
                 update(1, 1, N, b, diff);
             } else if (a == 2) { // 구간 합 구하기
-                bw.write(sum(1, 1, N, b, (int)c) + "\n");
+                bw.write(sum(1, 1, N, b, (int) c) + "\n");
             }
         }
 

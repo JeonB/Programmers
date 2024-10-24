@@ -7,21 +7,23 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
         int[] buildTime = new int[N + 1], indegree = new int[N + 1], result = new int[N + 1];
         List<Integer>[] graph = new ArrayList[N + 1];
-        for (int i = 1; i <= N; i++) graph[i] = new ArrayList<>();
+        for (int i = 1; i <= N; i++)
+            graph[i] = new ArrayList<>();
 
         for (int i = 1; i <= N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             buildTime[i] = Integer.parseInt(st.nextToken());
             while (true) {
                 int prerequisite = Integer.parseInt(st.nextToken());
-                if (prerequisite == -1) break;
+                if (prerequisite == -1)
+                    break;
                 graph[prerequisite].add(i);
                 indegree[i]++;
             }
@@ -39,10 +41,12 @@ public class Main {
             int current = queue.poll();
             for (int next : graph[current]) {
                 result[next] = Math.max(result[next], result[current] + buildTime[next]);
-                if (--indegree[next] == 0) queue.offer(next);
+                if (--indegree[next] == 0)
+                    queue.offer(next);
             }
         }
 
-        for (int i = 1; i <= N; i++) System.out.println(result[i]);
+        for (int i = 1; i <= N; i++)
+            System.out.println(result[i]);
     }
 }
