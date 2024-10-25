@@ -7,11 +7,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
 
         int n = Integer.parseInt(br.readLine());
 
@@ -48,8 +47,8 @@ public class Main {
         }
 
         // 결과 출력
-       bw.flush();
-       bw.write(count + "\n");
-       bw.close();
+        bw.flush();
+        bw.write(count + "\n");
+        bw.close();
     }
 }
