@@ -1,6 +1,7 @@
 function solution(n) {
     // 삼각형을 저장할 2차원 배열을 초기화합니다.
     const triangle = Array.from({ length: n }, (_, i) => Array(i + 1).fill(0));
+    console.log(triangle)
     let num = 1; // 삼각형에 채울 숫자
     let x = -1, y = 0; // 시작 위치
 
