@@ -1,10 +1,10 @@
 # [level 2] 소수 찾기 - 42839 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42839) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42839?language=java) 
 
 ### 성능 요약
 
-메모리: 100 MB, 시간: 40.29 ms
+메모리: 79 MB, 시간: 9.20 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 08월 29일 17:23:12
+2024년 12월 26일 16:04:07
 
 ### 문제 설명
 
