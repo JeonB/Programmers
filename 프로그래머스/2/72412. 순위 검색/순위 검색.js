@@ -1,48 +1,41 @@
 function solution(info, query) {
-    const db = {};
-
-    // 모든 조합을 생성하고 점수를 저장
-    function combination(array, score, start) {
-        const key = array.join('');
-        if (!db[key]) db[key] = [];
-        db[key].push(score);
-
-        for (let i = start; i < array.length; i++) {
-            const temp = [...array];
-            temp[i] = '-';
-            combination(temp, score, i + 1);
+    let answer = [];
+    const map = {}
+    const preprocess = (infoArr, score, idx) =>{
+        const condition = infoArr.join('')
+        if(!map[condition]) map[condition] = []
+        map[condition].push(score)
+        
+        for(let i = idx ; i < infoArr.length ; i++){
+           const tmp = [...infoArr]
+           tmp[i] = '-'
+            preprocess(tmp,score,i+1)
         }
     }
-
-    // info를 기반으로 사전 처리
-    info.forEach(entry => {
-        const [lang, job, career, food, score] = entry.split(' ');
-        combination([lang, job, career, food], parseInt(score), 0);
-    });
-
-    // 점수 목록 정렬
-    for (const key in db) {
-        db[key].sort((a, b) => a - b);
+    for(const data of info){
+        const [language,occupation,career,food,score] = data.split(' ')
+        preprocess([language,occupation,career,food],parseInt(score),0)
     }
-
-    // 이진 탐색 함수
-    function binarySearch(scores, target) {
-        let left = 0, right = scores.length;
-        while (left < right) {
-            const mid = Math.floor((left + right) / 2);
-            if (scores[mid] >= target) right = mid;
-            else left = mid + 1;
+    for(const key in map){
+        map[key].sort((a,b) => a-b)
+    }
+    const binarySearch = (arr , target)=>{
+        let left = 0
+        let right = arr.length
+        while(left < right){
+            const mid = Math.floor((left + right) / 2)
+            if(arr[mid] >= target) right = mid
+            else left = mid + 1
         }
-        return scores.length - left;
+        return arr.length - left
     }
-
-    // 쿼리 처리
-    return query.map(q => {
-        const [condition, targetScore] = q.replace(/ and /g, '').split(' ');
-        const key = condition;
-        const score = parseInt(targetScore);
-
-        if (!db[key]) return 0;
-        return binarySearch(db[key], score);
-    });
+    for(const q of query){
+        const [condition, targetScore] = q.replace(/ and /g,"").split(" ")
+        if(map[condition]){
+           const cnt = binarySearch(map[condition],parseInt(targetScore))
+           answer.push(cnt)
+        }else  answer.push(0)
+    }
+    
+    return answer;
 }
