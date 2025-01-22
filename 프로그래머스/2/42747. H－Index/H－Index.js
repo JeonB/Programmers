@@ -1,16 +1,18 @@
 function solution(citations) {
-    let answer = 0;
-    citations.sort((a,b) => a-b)
+    let h = 0
     const n = citations.length
-    
-    if(citations[n-1] === 0) return answer
+    citations.sort((a,b) => a-b)
     
     for(let i = 0 ; i < n ; i++){
-        const h = n - i
-        if(h <= citations[i]) return h
+        for(let standard = 0 ; standard < 10001 ; standard++){
+            if(citations[i] >= standard && n-i >= standard ){
+                h = Math.max(h,standard)
+            }else{
+                break
+            }
+           
+        }
     }
     
-    
-    
-    return answer;
+    return h
 }
