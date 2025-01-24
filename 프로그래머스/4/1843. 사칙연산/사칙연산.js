@@ -1,55 +1,32 @@
 function solution(arr) {
-     const numbers = [];
-    const operators = [];
-    
-    // 주어진 배열을 숫자와 연산자로 분리
-    for (let i = 0; i < arr.length; i++) {
-        if (i % 2 === 0) {
-            numbers.push(parseInt(arr[i]));  // 숫자만 숫자 배열에 추가
-        } else {
-            operators.push(arr[i]);  // 연산자는 연산자 배열에 추가
-        }
-    }
-    
-    const n = numbers.length;
-    
-    // dp 배열 초기화
-    // dp[i][j]는 numbers[i]부터 numbers[j]까지의 구간에 대해 가능한 연산 결과를 저장
-    let dpMax = Array.from(Array(n), () => Array(n).fill(null));
-    let dpMin = Array.from(Array(n), () => Array(n).fill(null));
+     const n = (arr.length + 1) / 2; // 숫자의 개수
 
-    // 각 숫자 하나에 대해 최소값과 최대값은 그 숫자 자체
+    // DP 테이블: maxDp[i][j]는 i번째 숫자부터 j번째 숫자까지 연산 결과의 최댓값
+    //            minDp[i][j]는 i번째 숫자부터 j번째 숫자까지 연산 결과의 최솟값
+    const maxDp = Array.from({ length: n }, () => Array(n).fill(-Infinity));
+    const minDp = Array.from({ length: n }, () => Array(n).fill(Infinity));
+
+    // 초기화: 숫자만 있는 경우
     for (let i = 0; i < n; i++) {
-        dpMax[i][i] = numbers[i];
-        dpMin[i][i] = numbers[i];
+        maxDp[i][i] = minDp[i][i] = parseInt(arr[i * 2]);
     }
 
-    // 구간 크기 증가하면서 계산
-    for (let len = 2; len <= n; len++) {
-        for (let i = 0; i <= n - len; i++) {
-            let j = i + len - 1;
-            dpMax[i][j] = -Infinity;
-            dpMin[i][j] = Infinity;
-
-            // 구간을 나누어 연산 결과를 계산
-            for (let k = i; k < j; k++) {
-                const operator = operators[k];
-                let maxValue, minValue;
-
+    // DP 탐색
+    for (let len = 1; len < n; len++) { // 구간의 길이
+        for (let i = 0; i < n - len; i++) {
+            const j = i + len; // 구간 끝
+            for (let k = i; k < j; k++) { // 연산자 위치
+                const operator = arr[k * 2 + 1];
                 if (operator === '+') {
-                    maxValue = dpMax[i][k] + dpMax[k + 1][j];
-                    minValue = dpMin[i][k] + dpMin[k + 1][j];
+                    maxDp[i][j] = Math.max(maxDp[i][j], maxDp[i][k] + maxDp[k + 1][j]);
+                    minDp[i][j] = Math.min(minDp[i][j], minDp[i][k] + minDp[k + 1][j]);
                 } else if (operator === '-') {
-                    maxValue = dpMax[i][k] - dpMin[k + 1][j];
-                    minValue = dpMin[i][k] - dpMax[k + 1][j];
+                    maxDp[i][j] = Math.max(maxDp[i][j], maxDp[i][k] - minDp[k + 1][j]);
+                    minDp[i][j] = Math.min(minDp[i][j], minDp[i][k] - maxDp[k + 1][j]);
                 }
-
-                dpMax[i][j] = Math.max(dpMax[i][j], maxValue);
-                dpMin[i][j] = Math.min(dpMin[i][j], minValue);
             }
         }
     }
 
-    // 최종적으로 dpMax[0][n-1]가 최댓값
-    return dpMax[0][n-1];
+    return maxDp[0][n - 1];
 }
