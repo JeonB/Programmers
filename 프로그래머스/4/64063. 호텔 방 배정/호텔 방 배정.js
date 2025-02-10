@@ -1,21 +1,18 @@
 function solution(k, room_number) {
-    const assigned = new Map(); // 유니온-파인드를 위한 맵
-    const answer = [];
-
-    function find(room) {
-        if (!assigned.has(room)) {
-            assigned.set(room, room + 1);
-            return room;
+    const map = new Map()
+    function find(roomNum){
+        if(!map.has(roomNum)){
+            map.set(roomNum, roomNum+1)
+            return roomNum
         }
-        let nextRoom = find(assigned.get(room)); // 경로 압축
-        assigned.set(room, nextRoom);
-        return nextRoom;
+        const nextRoom = find(map.get(roomNum))
+        map.set(roomNum,nextRoom)
+        return nextRoom
     }
-
-    for (let num of room_number) {
-        let room = find(num);
-        answer.push(room);
+    const answer = []
+    for(const num of room_number){
+        const room = find(num)
+        answer.push(room)
     }
-
     return answer;
 }
